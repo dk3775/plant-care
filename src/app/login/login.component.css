@@ -1,0 +1,6 @@
+.left-div {
+  background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhbnR8ZW58MHx8MHx8&w=1000&q=80');
+  background-size: fill;
+  object-fit: fill;
+  background-position: center;
+}

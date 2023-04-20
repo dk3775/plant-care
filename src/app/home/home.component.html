@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 mb-3" *ngFor="let plant of plants">
+            <div class="card mt-2">
+                <img class="card-img-top" [src]="plant.image" alt="{{ plant.name }} image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ plant.name }}</h5>
+                    <p class="card-text">Plant type: {{ plant.type }}</p>
+                    <p class="card-text">Water requirements: {{ plant.waterReq }}</p>
+                    <p class="card-text">Sunlight requirements: {{ plant.sunlightReq }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

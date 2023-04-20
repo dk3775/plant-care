@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row mt-3">
+        <h3>Plant List</h3>
+        <button type="button" class="btn btn-danger" (click)="clearLocalStorage()">Clear Local Storage</button>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Plant Name</th>
+                        <th>Plant Type</th>
+                        <th>Watering Requirements</th>
+                        <th>Sunlight Requirements</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let plant of plants">
+                        <td>{{ plant.name }}</td>
+                        <td>{{ plant.type }}</td>
+                        <td>{{ plant.waterReq }}</td>
+                        <td>{{ plant.sunlightReq }}</td>
+                        <td>
+                            <button type="button" class="btn btn-danger" (click)="delete(plant)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <h3>Add Plant</h3>
+        <div class="form-group">
+            <label for="plantName">Plant Name</label>
+            <input type="text" class="form-control" id="plantName" placeholder="Enter plant name" [(ngModel)]="pname">
+        </div>
+        <div class="form-group">
+            <label for="plantUrl">Plant Image URL</label>
+            <input type="text" class="form-control" id="plantUrl" placeholder="Enter plant image URL"
+                [(ngModel)]="purl">
+        </div>
+        <div class="form-group">
+            <label for="plantType">Plant Type</label>
+            <input type="text" class="form-control" id="plantType" placeholder="Enter plant type" [(ngModel)]="ptype">
+        </div>
+        <div class="form-group">
+            <label for="wateringReq">Watering Requirements</label>
+            <input type="text" class="form-control" id="wateringReq" placeholder="Enter watering requirements"
+                [(ngModel)]="pwateringReq">
+        </div>
+        <div class="form-group">
+            <label for="sunlightReq">Sunlight Requirements</label>
+            <input type="text" class="form-control" id="sunlightReq" placeholder="Enter sunlight requirements"
+                [(ngModel)]="psunReq">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary mt-2" (click)="add()">Submit</button>
+        </div>
+    </div>
